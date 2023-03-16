@@ -348,7 +348,7 @@ class _FifthScreenGridViewState extends State<FifthScreenGridView> {
                                           color: season2data[index]
                                                   ["containerIcon"]
                                               ? Colors.white10
-                                              : const Color(0xff248A3D)),
+                                              : const Color(0x4d248a3d)),
                                       child: Image.asset(
                                         season2data[index]["containerIcon"]
                                             ? "assets/images/arrow_Down.png"
