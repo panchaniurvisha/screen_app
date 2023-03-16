@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:screen_app/fifth_screen_.gridview.dart';
-//import 'package:screen_app/fourth_screen.dart';
-//import 'package:screen_app/home_screen.dart';
-//import 'package:screen_app/first_screen.dart';
-//import 'package:screen_app/second_screen.dart';
-//import 'package:screen_app/third_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -25,3 +21,7 @@ class MyApp extends StatelessWidget {
         home: const FifthScreenGridView());
   }
 }
+
+
+///
+/// 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
