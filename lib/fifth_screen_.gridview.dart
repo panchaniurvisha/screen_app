@@ -348,7 +348,7 @@ class _FifthScreenGridViewState extends State<FifthScreenGridView> {
                                           color: season2data[index]
                                                   ["containerIcon"]
                                               ? Colors.white10
-                                              : const Color(0x4d248a3d)),
+                                              : const Color(0xff248A3D)),
                                       child: Image.asset(
                                         season2data[index]["containerIcon"]
                                             ? "assets/images/arrow_Down.png"
@@ -619,126 +619,97 @@ class _FifthScreenGridViewState extends State<FifthScreenGridView> {
               const SizedBox(
                 height: 5,
               ),
-              Stack(
-                alignment: Alignment.bottomCenter,
-                children: [
-                  Container(
-                    height: 307,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(47),
-                          bottomLeft: Radius.circular(47)),
-                      gradient: LinearGradient(
-                        stops: [0.1, 0.6],
-                        colors: <Color>[
-                          Color.fromRGBO(28, 28, 31, 0),
-                          Color(0xff1C1C1F),
-                        ],
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.center,
-                        tileMode: TileMode.repeated,
-                      ),
-                    ),
+              Container(
+                height: 780,
+                decoration: const BoxDecoration(
+                  color: Color(0xff1E1E1E),
+                  borderRadius: BorderRadius.all(Radius.circular(47)),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 15,
+                    vertical: 30,
                   ),
-                  Container(
-                    height: 780,
-                    decoration: const BoxDecoration(
-                      color: Color(0xff1E1E1E),
-                      borderRadius: BorderRadius.all(Radius.circular(47)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 15,
-                        vertical: 30,
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Text(
+                            'More like this',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 22,
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
                       ),
-                      child: Column(
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      SizedBox(
+                        height: 525,
+                        child: GridView.builder(
+                          itemCount: moreLikes.length,
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3,
+                            mainAxisSpacing: 10,
+                            childAspectRatio: 0.7,
+                            crossAxisSpacing: 8,
+                          ),
+                          itemBuilder: (context, index) => Image.asset(
+                            moreLikes[index],
+                          ),
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                        ),
+                      ),
+                      Stack(
+                        alignment: Alignment.center,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                'More like this',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 22,
-                                  fontStyle: FontStyle.normal,
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 50,
-                          ),
                           SizedBox(
-                            height: 525,
+                            height: 110,
                             child: GridView.builder(
-                              itemCount: moreLikes.length,
+                              itemCount: moreLikesData.length,
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 3,
                                 mainAxisSpacing: 10,
-                                childAspectRatio: 0.7,
-                                crossAxisSpacing: 8,
+                                childAspectRatio: 1,
+                                crossAxisSpacing: 10,
                               ),
                               itemBuilder: (context, index) => Image.asset(
-                                moreLikes[index],
+                                moreLikesData[index],
                               ),
                               physics: const NeverScrollableScrollPhysics(),
                               shrinkWrap: true,
                             ),
                           ),
-                          SizedBox(
-                            height: 110,
-                            child: Stack(
-                                alignment: Alignment.bottomCenter,
-                                children: [
-                                  GridView.builder(
-                                    itemCount: moreLikesData.length,
-                                    gridDelegate:
-                                        const SliverGridDelegateWithFixedCrossAxisCount(
-                                      crossAxisCount: 3,
-                                      mainAxisSpacing: 10,
-                                      childAspectRatio: 1,
-                                      crossAxisSpacing: 10,
-                                    ),
-                                    itemBuilder: (context, index) =>
-                                        Image.asset(
-                                      moreLikesData[index],
-                                    ),
-                                    physics:
-                                        const NeverScrollableScrollPhysics(),
-                                    shrinkWrap: true,
-                                  ),
-                                  const Padding(
-                                    padding: EdgeInsets.only(top: 90),
-                                    child: Icon(
-                                      Icons.keyboard_arrow_down_rounded,
-                                      color: Colors.white60,
-                                      size: 30,
-                                    ),
-                                  ),
-                                  const Padding(
-                                    padding: EdgeInsets.only(
-                                      bottom: 20,
-                                    ),
-                                    child: Text(
-                                      'Show even more',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 17,
-                                        fontStyle: FontStyle.normal,
-                                      ),
-                                    ),
-                                  ),
-                                ]),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 40),
+                            child: Icon(
+                              Icons.keyboard_arrow_down_rounded,
+                              color: Colors.white60,
+                              size: 30,
+                            ),
+                          ),
+                          const Text(
+                            'Show even more',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 17,
+                              fontStyle: FontStyle.normal,
+                            ),
                           ),
                         ],
                       ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ],
           ),

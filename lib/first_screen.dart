@@ -18,6 +18,7 @@ class _FirstScreenState extends State<FirstScreen> {
             const SizedBox(
               height: 51,
             ),
+            //EdgeInsets.only(left: 106, right: 106, top: 51)),
             const Text(
               'Fill Your Profile,',
               style: TextStyle(
@@ -62,6 +63,7 @@ class _FirstScreenState extends State<FirstScreen> {
             const SizedBox(
               height: 20,
             ),
+
             Container(
               width: 378,
               height: 61,
@@ -84,6 +86,7 @@ class _FirstScreenState extends State<FirstScreen> {
             const SizedBox(
               height: 15,
             ),
+
             Container(
               height: 61,
               width: 378,
@@ -131,15 +134,12 @@ class _FirstScreenState extends State<FirstScreen> {
                     ),
                   ),
                   const SizedBox(
-                    width: 35,
+                    width: 88.67,
                   ),
                   Image.asset(
                     'assets/images/Vector.png',
                     height: 13.33,
                     width: 16.67,
-                  ),
-                  const SizedBox(
-                    width: 6,
                   ),
                 ],
               ),
@@ -167,7 +167,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   ),
                   const SizedBox(width: 6),
                   Image.asset(
-                    'assets/images/down.png',
+                    'assets/images/chevron-down.png',
                     height: 7.43,
                     width: 12.02,
                   ),
@@ -185,8 +185,9 @@ class _FirstScreenState extends State<FirstScreen> {
               ),
             ),
             const SizedBox(
-              height: 50,
+              height: 70,
             ),
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Row(
@@ -199,10 +200,10 @@ class _FirstScreenState extends State<FirstScreen> {
                         borderRadius: BorderRadius.circular(27),
                         color: const Color(0xffFFEEEF),
                       ),
-                      padding: const EdgeInsets.only(top: 21, bottom: 20),
+                      padding: const EdgeInsets.only(
+                          right: 76, left: 77, top: 21, bottom: 20),
                       child: const Text(
                         'Skip',
-                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontFamily: 'inter',
@@ -224,9 +225,9 @@ class _FirstScreenState extends State<FirstScreen> {
                         borderRadius: BorderRadius.circular(27),
                         color: const Color(0xffFF575C),
                       ),
-                      padding: const EdgeInsets.only(top: 21, bottom: 20),
+                      padding: const EdgeInsets.only(
+                          right: 74, left: 74, top: 21, bottom: 20),
                       child: const Text('Start',
-                          textAlign: TextAlign.center,
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontFamily: 'inter',
@@ -236,9 +237,6 @@ class _FirstScreenState extends State<FirstScreen> {
                           )),
                     ),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  )
                 ],
               ),
             ),
