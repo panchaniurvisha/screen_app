@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:screen_app/home_screen.dart';
+import 'package:screen_app/first_screen.dart';
 //import 'package:screen_app/first_screen.dart';
 //import 'package:screen_app/six_screen.dart';
 
@@ -19,6 +19,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const HomeScreen());
+        home: const FirstScreen());
   }
 }
