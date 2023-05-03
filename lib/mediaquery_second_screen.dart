@@ -27,10 +27,10 @@ class _MediaQuerySecondScreenState extends State<MediaQuerySecondScreen> {
               margin: EdgeInsets.only(top: height / 4.5),
               height: height,
               width: width,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(40),
-                    topRight: Radius.circular(40)),
+                    topLeft: Radius.circular(width / 10),
+                    topRight: Radius.circular(width / 10)),
                 color: Color(0xffFFFFFF),
               ),
             ),
@@ -41,9 +41,9 @@ class _MediaQuerySecondScreenState extends State<MediaQuerySecondScreen> {
                 children: [
                   Container(
                     height: height / 20,
-                    width: height / 20,
+                    width: width / 10,
                     margin:
-                        EdgeInsets.only(bottom: height / 20, top: height / 30),
+                    EdgeInsets.only(bottom: height / 20, top: height / 30),
                     decoration: BoxDecoration(
                       color: const Color(0xffFFFFFF),
                       borderRadius: BorderRadius.circular(10),
@@ -52,7 +52,7 @@ class _MediaQuerySecondScreenState extends State<MediaQuerySecondScreen> {
                         size: height / 40, color: const Color(0xff444251)),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: height / 70),
+                    padding: EdgeInsets.symmetric(horizontal: width / 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -70,48 +70,48 @@ class _MediaQuerySecondScreenState extends State<MediaQuerySecondScreen> {
                                   blurRadius: 60.5),
                             ],
                             borderRadius:
-                                BorderRadius.all(Radius.circular(height / 20)),
+                            BorderRadius.all(Radius.circular(width / 10)),
                           ),
                           child: Padding(
                             padding: EdgeInsets.symmetric(
-                              horizontal: height / 30,
+                              horizontal: width / 15,
                               vertical: height / 60,
                             ),
                             child: Stack(
                               children: [
                                 Container(
                                   height: height / 30,
-                                  width: height / 30,
+                                  width: width / 10,
                                   decoration: const BoxDecoration(
                                       color: Color(0xffEDEDED),
                                       shape: BoxShape.circle),
                                 ),
                                 Container(
-                                  margin: const EdgeInsets.only(left: 20),
+                                  margin: EdgeInsets.only(left: width / 25),
                                   height: height / 30,
-                                  width: height / 30,
+                                  width: width / 10,
                                   decoration: const BoxDecoration(
                                       color: Color(0xffBEB6B6),
                                       shape: BoxShape.circle),
                                 ),
                                 Container(
-                                  margin: const EdgeInsets.only(left: 40),
+                                  margin: EdgeInsets.only(left: width / 12),
                                   height: height / 30,
-                                  width: height / 30,
+                                  width: width / 10,
                                   decoration: const BoxDecoration(
                                       color: Color(0xffC1C1C1),
                                       shape: BoxShape.circle),
                                 ),
                                 Container(
                                   margin: EdgeInsets.only(
-                                      left: height / 10, top: height / 180),
+                                      left: width / 5, top: height / 180),
                                   height: height / 40,
                                   width: width / 10,
                                   child: Image.asset('assets/images/star.png'),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(
-                                      left: height / 7, top: height / 100),
+                                      left: width / 3.5, top: height / 100),
                                   child: Container(
                                     height: height / 20,
                                     width: width / 20,
@@ -133,7 +133,7 @@ class _MediaQuerySecondScreenState extends State<MediaQuerySecondScreen> {
                         ),
                         Container(
                             height: height / 15,
-                            width: height / 15,
+                            width: width / 5,
                             margin: EdgeInsets.only(top: height / 30),
                             decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
@@ -181,15 +181,15 @@ class _MediaQuerySecondScreenState extends State<MediaQuerySecondScreen> {
                         ),
                       ),
                       SizedBox(
-                        width: width / 8,
+                        width: width / 6,
                       ),
                       Container(
                         height: height / 16,
-                        width: height / 16,
+                        width: width / 8,
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(
-                              width: 2,
+                              width: width / 200,
                               color: const Color(
                                 0xff444251,
                               ),
@@ -217,16 +217,16 @@ class _MediaQuerySecondScreenState extends State<MediaQuerySecondScreen> {
                       ),
                       Container(
                         height: height / 16,
-                        width: height / 16,
+                        width: width / 8,
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(
-                              width: 2,
+                              width: width / 200,
                               color: const Color(0xffF24F04),
                             )),
-                        child: const Icon(
+                        child: Icon(
                           Icons.add,
-                          size: 30,
+                          size: height / 30,
                           color: Color(0xffF24F04),
                         ),
                       ),
@@ -277,10 +277,11 @@ class _MediaQuerySecondScreenState extends State<MediaQuerySecondScreen> {
                     children: [
                       Container(
                         height: height / 9,
-                        width: height / 7,
-                        decoration: const BoxDecoration(
+                        width: width / 3.5,
+                        decoration: BoxDecoration(
                             color: Color(0xffFFFFFF),
-                            borderRadius: BorderRadius.all(Radius.circular(27)),
+                            borderRadius:
+                            BorderRadius.all(Radius.circular(width / 15)),
                             boxShadow: [
                               BoxShadow(
                                 color: Color(0xffD7D9DB),
@@ -319,11 +320,11 @@ class _MediaQuerySecondScreenState extends State<MediaQuerySecondScreen> {
                       ),
                       Container(
                         height: height / 9,
-                        width: height / 7,
-                        decoration: const BoxDecoration(
+                        width: width / 3.5,
+                        decoration: BoxDecoration(
                           color: Color(0xffFFFFFF),
                           borderRadius: BorderRadius.all(
-                            Radius.circular(27),
+                            Radius.circular(width / 15),
                           ),
                           boxShadow: [
                             BoxShadow(
@@ -382,7 +383,7 @@ class _MediaQuerySecondScreenState extends State<MediaQuerySecondScreen> {
                         decoration: BoxDecoration(
                             color: const Color(0xFFF24F04),
                             borderRadius:
-                                BorderRadius.all(Radius.circular(height / 10))),
+                            BorderRadius.all(Radius.circular(width / 10))),
                         child: Padding(
                           padding: EdgeInsets.symmetric(vertical: height / 50),
                           child: Text(
